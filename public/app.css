@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(189, 189, 189);   
+}
+
+table{
+    background-color: rgb(43, 172, 165);
+    
+}
+
+#logo{
+    width:50px;
+}
+
+#identifiant{
+font-size: 5em;
+
+}

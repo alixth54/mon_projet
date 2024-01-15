@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'cate'|trans({}, 'messages')|raw}}{% endblock %}
+{% block header %}
+{{ include('main/menuUser.html.twig') }}
+{% endblock %}
+
+
+
+{% block section %}
+
+{% for message in app.flashes('success') %}
+    <div class="flash-success alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+<table class="table table-responsive{-sm|-md} table-hover table-striped mt-4">
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">{{ 'name'|trans({}, 'messages')|raw}}</th>
+      {# <th scope="col">Tâche</th>
+      <th scope="col">Description</th>
+      <th scope="col">Date</th> #}
+    <th scope="col">{{ 'edit'|trans({}, 'messages')|raw}}</th>
+    <th scope="col">{{ 'delete'|trans({}, 'messages')|raw}}</th>
+    
+    </tr>
+  </thead>
+  
+  <tbody>
+    {% for cat in category %}
+        <tr>
+        <th scope="row">#</th>
+        <td>{{cat.name}}</td>
+            
+        {# <ul>
+            {% for task in cat %}
+        <li>{{task.name}}</li>
+        {% endfor %}
+        </ul> #}
+        
+        
+        <td><a href="{{ path('app_edit_category' ,{id: cat.id}) }}"><i class="fa-solid fa-pen"></i></a></td>
+            
+                <td><a href="{{ path('app_deleteCat',{id: cat.id}) }}"><i class="fa-solid fa-trash fa-beat-fade"></i></a></td>
+            
+        </tr>
+    {% endfor %}
+    
+  </tbody>
+
+</table>
+   
+<a class="float-right mr-5" href="{{ path('app_add_category') }}">Ajouter</i></a>
+    
+<script src="https://kit.fontawesome.com/84e710da70.js" crossorigin="anonymous"></script>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'cate'|trans({}, 'messages')|raw}}{% endblock %}
+{% block header %}
+{{ include('main/menuUser.html.twig') }}
+{% endblock %}
+
+
+
+{% block body %}
+<div class="container text-align">
+{{ form_start(form) }}
+    <div class="row flex justify-content-around mt-3">
+        <div >
+            {{ form_label(form.name) }}
+        </div>
+        <div>
+            {{ form_widget(form.name) }}
+        </div>
+    </div>
+    <div class="row float-right mr-5 ">
+        {{ form_widget(form.Valider) }}
+    </div>
+
+{{form_end(form)}}
+<script src="https://kit.fontawesome.com/84e710da70.js" crossorigin="anonymous"></script>
+</div>
+{% endblock %}

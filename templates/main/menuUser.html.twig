@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+{% if app.user.brochureFilename != null %}
+  <a class="navbar-brand" href="{{ path('app_main')}}"><img id="logo" style="width:80px" src="{{ asset('uploads/' ~ app.user.brochureFilename) }}"></a>
+{% else %}
+<a class="navbar-brand" href="{{ path('app_main')}}"><img id="logo" style="width:80px" src="{{ asset('media/logo.jpg') }}"></a>
+
+{% endif %}
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span id="identifiant" class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse flex justify-content-end" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="{{ path('app_main')}}">{{ 'home'|trans({}, 'messages')|raw}} <span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ path('app_task')}}">{{ 'tasktitle'|trans({}, 'messages')|raw}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ path('app_category')}}">{{ 'cate'|trans({}, 'messages')|raw}}</a>
+  </li>
+</ul>
+    <div>
+    <a href="{{ path('app_logout')}}">{{ 'disconnect'|trans({}, 'messages')|raw}}</a>
+    </div>
+  </div>
+</nav>
+<p class="text-light text-center"><b><span id="identifiant" style="font-size:3em">{{ app.user.firstName }} {{ app.user.lastName }}</span></b></p>

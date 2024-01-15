@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{{ path('app_main')}}"><img id="logo" style="width:80px" src="{{ asset('media/logo.jpg')}}"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <div>
+  <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ path('app_main')}}">{{ 'home'|trans({}, 'messages')|raw}} <span class="sr-only">(current)</span></a>
+      </li>
+      
+    
+ 
+  
+    <li class="nav-item">
+      <a class="nav-link" href="{{ path('app_register')}}">{{ 'subscribe'|trans({}, 'messages')|raw}}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ path('app_login')}}">{{ 'connect'|trans({}, 'messages')|raw}}</a>
+    </li>
+    <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ 'langue'|trans({}, 'messages')|raw}}</a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({_locale: 'fr'})) }}">{{ 'french'|trans({}, 'messages')|raw}}</a>
+    <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({_locale: 'en'})) }}">{{ 'english'|trans({}, 'messages')|raw}}</a>
+    
+  </div>
+</li>
+</ul>
+</nav>

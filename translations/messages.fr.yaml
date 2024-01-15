@@ -1,0 +1,48 @@
+intro: 'Organiser vos tâches facilement'
+home: 'Accueil'
+connect: 'Connection'
+disconnect: 'Déconnection'
+task: 'Tâches à faire'
+cate: 'Catégories des tâches'
+enter: 'Valider'
+subscribe: 'souscrire'
+del: 'Supprimer'
+edit: 'Modifier'
+pswrd: 'Mot de passe'
+priority: 'Priorité'
+tasktitle: 'Tâches'
+description: 'Description'
+delay: 'Date effective'
+pswrdf: 'Mot de passe oublié ?'
+respswrd: 'Changer de mot de passe'
+rpswrd: 'Changer le mot de passe'
+sendpswrd: "Envoyer l'émail pour changer le mot de passe"
+messagereset: 'Entrer votre adresse email, et nous vous enverrons un lien pour changer votre mot de passe.'
+emailreset: '<h1>Salut !</h1>
+
+<p>Pour changer votre mot de passe, merci de cliquer sur ce lien!</p>'
+link: 'Ce lien expirera le'
+bye: 'Au revoir !'
+checkemail: "Si votre émail est enregistré, alors un émail vous sera envoyé pour changer votre mot de passe et le lien qu'il contient expirera le"
+checkemail2: "Si vous n'avez pas reçu d'émail, vérifier dans vos spam ou relancer l'opération"
+emailsubscribe: '<h1>Félicitation !</h1>
+Vous avez souscrit à KESKIFEKOI !'
+hello: 'Bonjour'
+name: 'Nom'
+langue: 'Langue'
+french: 'Français'
+english: 'Anglais'
+agree: 'Accepter les conditions'
+file: "Pas d'image choisie"
+choosefile: 'Choisir un avatar'
+You should agree to our terms: "Veuillez accepter les Conditions"
+Agree terms: "Accepter les Conditions"
+Last name: "Nom"
+First name: "Prénom"
+Birth date: "Date de naisance"
+No file chosen: "Pas d'avatar séléctionné"
+Password: "Mot de passe"
+Repeat Password: "Vérification du mot de passe"
+Choose File: "Charger votre avatar"
+Name: "Nom"
+

@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'tasktitle'|trans({}, 'messages')|raw}}{% endblock %}
+{% block header %}
+{{ include('main/menuUser.html.twig') }}
+{% endblock %}
+
+
+
+{% block body %}
+<div class="container text-align">
+{{ form_start(form) }}
+    <div class="row">
+        <div class="col">
+            
+            {{ form_label(form.name) }}
+        </div>
+        <div class="col">
+            {{ form_widget(form.name) }}
+            {{ form_errors(form.name) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.description) }}
+        </div>
+        <div class="col">
+            {{ form_widget(form.description) }}
+            {{ form_errors(form.description) }}
+        </div>
+        
+        
+
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.intervention_delay) }}
+        </div>
+        <div class="col datepicker">
+            {{ form_widget(form.intervention_delay) }}
+            {{ form_errors(form.intervention_delay) }}
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.priority) }}
+        </div>
+        <div class="col">
+            {{ form_widget(form.priority) }}
+            {{ form_errors(form.priority) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        {{ form_label(form.category_id) }}
+        </div>
+        <div class="col">
+        {{ form_widget(form.category_id) }}
+        </div>
+    </div>
+    <div class="row float-right mr-5 ">
+        
+        <div >
+        {{ form_widget(form.Valider) }}
+        </div>
+        
+    </div>
+
+{{form_end(form)}}
+<script src="https://kit.fontawesome.com/84e710da70.js" crossorigin="anonymous"></script>
+</div>
+{% endblock %}
+

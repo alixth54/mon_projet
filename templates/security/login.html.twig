@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'connect'|trans({}, 'messages')|raw}}{% endblock %}
+{% block header %}
+{{ include('main/menu.html.twig') }}
+{% endblock %}
+{% block body %}
+<form method="post" class="form-group col mt-5">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            Bonjour {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">{{ 'diconnect'|trans({}, 'messages')|raw}}</a>
+        </div>
+    {% endif %}
+<div class="form-group" style="margin-left:400px">
+    <h1 class="h3 mb-3 font-weight-normal">{{ 'connect'|trans({}, 'messages')|raw}}</h1>
+    <div class="row ml-4 mt-5">
+    <div class="col-4 ">
+<label for="inputEmail">Email</label>
+<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control-md" autocomplete="email" required autofocus>
+    </div>
+    <div class="col">
+<label for="inputPassword">{{ 'pswrd'|trans({}, 'messages')|raw}}</label>
+<input type="password" name="password" id="inputPassword" class="form-control-md" autocomplete="current-password" required>
+<a class="form-group row justify-content-center" href="{{ path('app_forgot_password_request')}}">{{ 'pswrdf'|trans({}, 'messages')|raw}}</a>
+
+</div>
+
+  </div>
+    
+    
+
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+
+    <button class="btn btn-lg btn-primary ml-5 mt-5" type="submit">
+    {{ 'connect'|trans({}, 'messages')|raw}}
+    </button>
+</div>
+</form>
+{% endblock %}

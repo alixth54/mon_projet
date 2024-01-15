@@ -1,0 +1,7 @@
+{{ 'emailreset'|trans({}, 'messages')|raw}}
+
+<a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+
+<p>{{ 'link'|trans({}, 'messages')|raw}} {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+
+<p>{{ 'bye'|trans({}, 'messages')|raw}}</p>

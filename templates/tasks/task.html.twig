@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'tasktitle'|trans({}, 'messages')|raw}}{% endblock %}
+{% block header %}
+{{ include('main/menuUser.html.twig') }}
+{% endblock %}
+
+
+
+{% block section %}
+{# Bonjour {{ app.user.firstName }} #}
+{# <a href="{{ asset('uploads/' ~ app.user.brochureFilename) }}">View brochure (PDF)</a> #}
+{# <img src="{{ asset('uploads/' ~ app.user.brochureFilename) }}"> #}
+{% for message in app.flashes('success') %}
+    <div class="flash-success alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+<table class="table table-responsive{-sm|-md} table-hover table-striped mt-4">
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">{{ 'priority'|trans({}, 'messages')|raw}}</th>
+      <th scope="col">{{ 'task'|trans({}, 'messages')|raw}}</th>
+      <th scope="col">{{ 'description'|trans({}, 'messages')|raw}}</th>
+      <th scope="col">{{ 'date'|trans({}, 'messages')|raw}}</th>
+    <th scope="col">{{ 'modify'|trans({}, 'messages')|raw}}</th>
+    <th scope="col">{{ 'delete'|trans({}, 'messages')|raw}}</th>
+    
+    </tr>
+  </thead>
+  
+  <tbody>
+    {% for task in tasks %}
+        <tr>
+        <th scope="row">#</th>
+        <td>{{task.priority}}</td>
+        <td>{{task.name}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.getInterventionDelay()|date('d/m/Y')}}</td>
+        <td><a href="{{ path('app_edit_task' ,{id: task.id}) }}"><i class="fa-solid fa-pen"></i></a></td>
+            
+                <td><a href="{{ path('app_delete',{id: task.id}) }}"><i class="fa-solid fa-trash fa-beat-fade"></i></a></td>
+            
+        </tr>
+    {% endfor %}
+    
+  </tbody>
+
+</table>
+   
+<a class="float-right mr-5" href="{{ path('app_add_task') }}">{{ 'enter'|trans({}, 'messages')|raw}}</i></a>
+    
+<script src="https://kit.fontawesome.com/84e710da70.js" crossorigin="anonymous"></script>
+
+{% endblock %}

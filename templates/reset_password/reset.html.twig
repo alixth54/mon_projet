@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'respswrd'|trans({}, 'messages')|raw}}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'respswrd'|trans({}, 'messages')|raw}}</h1>
+
+    {{ form_start(resetForm) }}
+        {{ form_row(resetForm.password) }}
+        <button class="btn btn-primary">{{ 'rpswrd'|trans({}, 'messages')|raw}}</button>
+    {{ form_end(resetForm) }}
+{% endblock %}

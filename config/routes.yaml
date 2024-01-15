@@ -1,0 +1,10 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+contact:
+    path:       /{_locale}/
+    controller: App\Controller\MainController::index
+    requirements:
+        _locale: en|fr

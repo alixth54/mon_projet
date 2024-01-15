@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'sendpswrd'|trans({}, 'messages')|raw}}{% endblock %}
+
+{% block body %}
+    <p>
+        {{ 'checkemail'|trans({}, 'messages')|raw}} {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+    </p>
+    <p>{{ 'checkemail2'|trans({}, 'messages')|raw}}<a href="{{ path('app_login') }}">Log in</a>.</p>
+{% endblock %}

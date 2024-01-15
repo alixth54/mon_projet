@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'tasktitle'|trans({}, 'messages')|raw}}{% endblock %}
+{% block header %}
+{{parent()}}
+{% endblock %}
+
+
+
+{% block section %}
+
+<img  id="logo" style="width:300px; margin-left:42%; margin-top:5%; margin-bottom:5%" src="{{ asset('media/logo.jpg')}}">
+<h1 class="text-center">{{ 'intro'|trans({}, 'messages')|raw}}</h1>
+
+{% endblock %}

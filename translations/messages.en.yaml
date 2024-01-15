@@ -1,0 +1,45 @@
+intro: 'Easy Task organizer'
+home: 'Home'
+connect: 'Login'
+disconnect: 'Logout'
+task: 'Tasks view'
+cate: 'Category task'
+enter: 'Validate'
+subscribe: 'Subscribe'
+del: 'Delete'
+edit: 'Edit'
+pswrd: 'Password'
+priority: 'Priority'
+tasktitle: 'Tasks'
+description: 'Description'
+delay: 'Delay'
+pswrdf: 'Forgotten your password ?'
+respswrd: 'Reset your password'
+rpswrd: 'Reset password'
+sendpswrd: 'Send password reset email'
+messagereset: 'Enter your email address, and we will send you a
+                link to reset your password.'
+emailreset: '<h1>Hi!</h1>
+
+<p>To reset your password, please visit the following link</p>'
+link: 'This link will expire in'
+bye: 'Cheers!'
+checkemail: 'If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.
+        This link will expire in'
+checkemail2: "If you don't receive an email please check your spam folder or"
+emailsubscribe: '<h1>Congratulation !</h1>
+You have subscribe to KESKIFEKOI !'
+hello: 'Hello'
+name: 'Name'
+langue: 'Language'
+french: 'French'
+english: 'English'
+You should agree to our terms: "You should agree to our terms"
+Agree terms: "Agree terms"
+Last name: "Last name"
+First name: "first name"
+Birth date: "Birthdate"
+No file chosen: "No file choosen"
+Password: "Password"
+Choose File: "Choose your Avatar"
+Name: "Name"
