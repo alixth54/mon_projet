@@ -15,6 +15,14 @@ framework:
     #fragments: true
     php_errors:
         log: true
+        
+    exceptions:
+        Symfony\Component\HttpKernel\Exception\BadRequestHttpException:
+            log_level: debug
+            status_code: 422
+        App\Something\Exception\SomeException:
+            log_level: alert
+            status_code: 503
 
 when@test:
     framework:
