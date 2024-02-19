@@ -14,7 +14,7 @@ class MainController extends AbstractController
 {
     
 
-    #[Route('/{_locale}/main', name: 'app_main')]
+    #[Route('/{_locale}', name: 'app_main')]
     public function accueil(): Response
     {
         
